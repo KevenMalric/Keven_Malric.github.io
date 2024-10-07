@@ -1,0 +1,37 @@
+@use "./partials/text";
+@use "./partials/couleur";
+
+//Version Desktop
+@media screen and (min-width: 768px) {
+   body {
+    display: grid;
+    grid-area:
+    "hero hero hero"
+    "sidebar projets projets"
+    "sidebar projets projets"
+    "sidebar contactes contactes"
+    ;
+    & .sidebar {
+        background-color: var(--pale-creme);
+    }
+    & .projets {
+        background-color: var(--pourpre);
+    }
+    & .contactes {
+        background-color: var(--brown);
+    }
+   } 
+   
+}
+//Version Tablette
+@media screen and (min-width: 375) and (max-width: 768) {
+    .sidebar {
+        display: none;
+    }
+}
+//version Mobile
+@media screen and (max-width: 375px) {
+    .sidebar {
+        display: none;
+    }
+}

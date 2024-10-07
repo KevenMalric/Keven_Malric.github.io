@@ -1,1 +1,32 @@
-/*# sourceMappingURL=styles.css.map */
+:root {
+  --pale-creme: #D3B99F;
+  --creme: ##D3B99F;
+  --brown: #785E51;
+  --pourpre: #32021F;
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    display: grid;
+    grid-area: "hero hero hero" "sidebar projets projets" "sidebar projets projets" "sidebar contactes contactes";
+  }
+  body .sidebar {
+    background-color: var(--pale-creme);
+  }
+  body .projets {
+    background-color: var(--pourpre);
+  }
+  body .contactes {
+    background-color: var(--brown);
+  }
+}
+@media screen and (min-width: 375) and (max-width: 768) {
+  .sidebar {
+    display: none;
+  }
+}
+@media screen and (max-width: 375px) {
+  .sidebar {
+    display: none;
+  }
+}/*# sourceMappingURL=styles.css.map */
