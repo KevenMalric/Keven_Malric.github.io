@@ -4,24 +4,42 @@
 //Version Desktop
 @media screen and (min-width: 768px) {
    body {
+    background-color: var(--pourpre);
     display: grid;
-    grid-area:
+    grid-template-areas:
     "hero hero hero"
     "sidebar projets projets"
-    "sidebar projets projets"
+    "sidebar a_propos a_propos"
     "sidebar contactes contactes"
     ;
     & .sidebar {
         background-color: var(--pale-creme);
+
+        grid-area: sidebar;
+    }
+    & .hero{
+        background-color: var(--pourpre);
+        color: var(--creme);
+        grid-area: hero;
     }
     & .projets {
         background-color: var(--pourpre);
+        color: var(--creme);
+        grid-area: projets;
+    }
+    & .a_propos {
+        background-color: var(--pourpre);
+        color: var(--creme);
+        & .liste_competences {
+            width: 100%;
+        }
     }
     & .contactes {
         background-color: var(--brown);
+        color: var(--creme);
+        grid-area: contactes;
     }
    } 
-   
 }
 //Version Tablette
 @media screen and (min-width: 375) and (max-width: 768) {
