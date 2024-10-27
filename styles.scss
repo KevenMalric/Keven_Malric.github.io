@@ -3,6 +3,24 @@
 
 //Version Desktop
 @media screen and (min-width: 768px) {
+
+   * {
+    h1{
+        font-family: "Oregano-Regular";
+        font-size: 110px;
+    }
+    h2{
+        font-size: 72px;
+    }
+    p{
+        font-family: "Katibeh";
+        font-size: 64px;
+    }
+    li{
+        font-size: 64px;
+        text-align: center;
+    }
+   } 
    body {
     background-color: var(--pourpre);
     display: grid;
@@ -12,27 +30,29 @@
     "sidebar a_propos a_propos"
     "sidebar contactes contactes"
     ;
-    & .sidebar {
-        background-color: var(--pale-creme);
 
-        grid-area: sidebar;
-    }
     & .hero{
         position: relative;
         background-color: var(--pourpre);
-        color: var(--creme);
+        color: var(--brown);
         grid-area: hero;
         .intro{
             position: absolute;
-            right: 5%;
+            right: 5vw;        
             h1{
-                font-size: 110px;
+                font-size: 110px; 
+                text-shadow: 0 3px 5px black;
             }
             p{
-                font-size: 64px;
                 padding-left: 20%;
+                text-shadow: 0 1px 5px black;
             }
         }
+
+    }
+    & .sidebar {
+        background-color: var(--pale-creme);
+        grid-area: sidebar;
     }
     & .projets {
         background-color: var(--pourpre);
@@ -41,13 +61,24 @@
         grid-area: projets;
     }
     .a_propos {
+        display: block;
         background-color: var(--pourpre);
         color: var(--creme);
+        padding: 10% 10%;
+
+        & h1{
+            text-align: center;
+        }
+        & h2{
+            text-align: center;
+        }
         & .liste_competences {
             width: 100%;
         }
+        
     }
     & .contactes {
+        padding: 10% 10%;
         background-color: var(--brown);
         color: var(--creme);
         grid-area: contactes;

@@ -1,3 +1,15 @@
+@font-face {
+  font-family: "Oregano-Regular";
+  src: url("../assets/fonts/Oregano/Oregano-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Oregano-Italic";
+  src: url("../assets/fonts/Oregano/Oregano-Italic.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Katibeh";
+  src: url("../assets/fonts/Katibeh/Katibeh-Regular.ttf") format("truetype");
+}
 :root {
   --pale-creme: #D3B99F;
   --creme: #D3B99F;
@@ -6,31 +18,47 @@
 }
 
 @media screen and (min-width: 768px) {
+  * h1 {
+    font-family: "Oregano-Regular";
+    font-size: 110px;
+  }
+  * h2 {
+    font-size: 72px;
+  }
+  * p {
+    font-family: "Katibeh";
+    font-size: 64px;
+  }
+  * li {
+    font-size: 64px;
+    text-align: center;
+  }
   body {
     background-color: var(--pourpre);
     display: grid;
     grid-template-areas: "hero hero hero" "sidebar projets projets" "sidebar a_propos a_propos" "sidebar contactes contactes";
   }
-  body .sidebar {
-    background-color: var(--pale-creme);
-    grid-area: sidebar;
-  }
   body .hero {
     position: relative;
     background-color: var(--pourpre);
-    color: var(--creme);
+    color: var(--brown);
     grid-area: hero;
   }
   body .hero .intro {
     position: absolute;
-    right: 5%;
+    right: 5vw;
   }
   body .hero .intro h1 {
     font-size: 110px;
+    text-shadow: 0 3px 5px black;
   }
   body .hero .intro p {
-    font-size: 64px;
     padding-left: 20%;
+    text-shadow: 0 1px 5px black;
+  }
+  body .sidebar {
+    background-color: var(--pale-creme);
+    grid-area: sidebar;
   }
   body .projets {
     background-color: var(--pourpre);
@@ -39,13 +67,22 @@
     grid-area: projets;
   }
   body .a_propos {
+    display: block;
     background-color: var(--pourpre);
     color: var(--creme);
+    padding: 10% 10%;
+  }
+  body .a_propos h1 {
+    text-align: center;
+  }
+  body .a_propos h2 {
+    text-align: center;
   }
   body .a_propos .liste_competences {
     width: 100%;
   }
   body .contactes {
+    padding: 10% 10%;
     background-color: var(--brown);
     color: var(--creme);
     grid-area: contactes;
