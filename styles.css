@@ -31,7 +31,6 @@
   }
   * li {
     font-size: 64px;
-    text-align: center;
   }
   body {
     background-color: var(--pourpre);
@@ -60,17 +59,50 @@
     background-color: var(--pale-creme);
     grid-area: sidebar;
   }
+  body .sidebar img {
+    width: 40%;
+  }
   body .projets {
     background-color: var(--pourpre);
     color: var(--creme);
     padding: 10% 10%;
     grid-area: projets;
+    display: grid;
+    grid-template-areas: "project1 project2" "project3 project4";
+    justify-content: center;
+    row-gap: 50px;
+    -moz-column-gap: 50px;
+         column-gap: 50px;
+  }
+  body .projets .personnage_3d {
+    grid-area: project1;
+  }
+  body .projets .personnage_3d img {
+    width: 60%;
+  }
+  body .projets .animation_3d {
+    grid-area: project2;
+  }
+  body .projets .animation_3d img {
+    width: 60%;
+  }
+  body .projets .photoshop {
+    grid-area: project3;
+  }
+  body .projets .photoshop img {
+    width: 60%;
+  }
+  body .projets .montage_video {
+    grid-area: project4;
+  }
+  body .projets .montage_video img {
+    width: 60%;
   }
   body .a_propos {
-    display: block;
+    display: grid;
+    padding: 10% 10%;
     background-color: var(--pourpre);
     color: var(--creme);
-    padding: 10% 10%;
   }
   body .a_propos h1 {
     text-align: center;
@@ -82,8 +114,8 @@
     width: 100%;
   }
   body .contactes {
-    padding: 10% 10%;
     background-color: var(--brown);
+    padding: 10% 10%;
     color: var(--creme);
     grid-area: contactes;
   }

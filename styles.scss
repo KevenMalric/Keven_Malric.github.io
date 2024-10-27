@@ -18,9 +18,10 @@
     }
     li{
         font-size: 64px;
-        text-align: center;
     }
    } 
+
+
    body {
     background-color: var(--pourpre);
     display: grid;
@@ -30,7 +31,6 @@
     "sidebar a_propos a_propos"
     "sidebar contactes contactes"
     ;
-
     & .hero{
         position: relative;
         background-color: var(--pourpre);
@@ -48,23 +48,58 @@
                 text-shadow: 0 1px 5px black;
             }
         }
-
     }
     & .sidebar {
         background-color: var(--pale-creme);
         grid-area: sidebar;
+        img {
+            width: 40%;
+        }
     }
     & .projets {
         background-color: var(--pourpre);
         color: var(--creme);
         padding: 10% 10%;
         grid-area: projets;
+        display: grid;
+        grid-template-areas: 
+        "project1 project2"
+        "project3 project4"
+        ;
+        justify-content: center;
+        row-gap: 50px;
+        column-gap: 50px;
+        .personnage_3d {
+            grid-area: project1;
+            img {
+                width: 60%;
+            }
+        }
+        .animation_3d {
+            grid-area: project2;
+            img {
+                width: 60%;
+            }
+        }
+        .photoshop {
+
+            grid-area: project3;
+            img {
+                width: 60%;
+            }
+        }
+        .montage_video {
+            grid-area: project4;
+            img {
+                width: 60%;
+            }
+        }
     }
     .a_propos {
-        display: block;
+        display: grid;
+        padding: 10% 10%;
         background-color: var(--pourpre);
         color: var(--creme);
-        padding: 10% 10%;
 
         & h1{
             text-align: center;
@@ -78,8 +113,8 @@
         
     }
     & .contactes {
-        padding: 10% 10%;
         background-color: var(--brown);
+        padding: 10% 10%;
         color: var(--creme);
         grid-area: contactes;
     }
