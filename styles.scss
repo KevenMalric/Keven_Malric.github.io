@@ -18,16 +18,29 @@
         grid-area: sidebar;
     }
     & .hero{
+        position: relative;
         background-color: var(--pourpre);
         color: var(--creme);
         grid-area: hero;
+        .intro{
+            position: absolute;
+            right: 5%;
+            h1{
+                font-size: 110px;
+            }
+            p{
+                font-size: 64px;
+                padding-left: 20%;
+            }
+        }
     }
     & .projets {
         background-color: var(--pourpre);
         color: var(--creme);
+        padding: 10% 10%;
         grid-area: projets;
     }
-    & .a_propos {
+    .a_propos {
         background-color: var(--pourpre);
         color: var(--creme);
         & .liste_competences {
